@@ -220,7 +220,7 @@
       <div class="name">文野 光</div>
       <div class="name__yomi">Humino Hikaru</div>
       <div class="name__adana">ふみのさん</div>
-      <div class="part">Gt, Vo</div>
+      <div class="part">Gt</div>
     </div>
   </div>
 </div>
@@ -250,7 +250,7 @@
   <div class="content">
     <div class="smoke"></div>
     <div class="senpai">
-      <div class="name">堀江 裕太</div>
+      <div class="name">堀江 祐太</div>
       <div class="name__yomi">Horie yuta</div>
       <div class="name__adana">ほりえさん</div>
       <div class="part">Gt, Vo</div>
@@ -275,7 +275,7 @@
       <div class="name">松尾 健人</div>
       <div class="name__yomi">Matsuo kento</div>
       <div class="name__adana">けんとまんさん</div>
-      <div class="part">Dr</div>
+      <div class="part">Dr, Key</div>
     </div>
   </div>
 </div>
@@ -342,6 +342,17 @@
 
 <script>
 $(function(){
+  $(window).on("ready resize", function(){
+    if($(window).height() > $(window).width()){
+      $(".panel").css({
+        "background-size" : "cover"
+      });
+    }else{
+      $(".panel").css({
+        "background-size" : "contain"
+      })
+    }
+  });
   document.ontouchmove = function(event){
     event.preventDefault();
   }

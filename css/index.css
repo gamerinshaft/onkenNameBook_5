@@ -49,22 +49,139 @@ body,html{
   background-position: center;
 }
 #tab3.panel{
-  background-image: url("../img/3.jpg");
+  background-image: url("../img/asano.jpg");
   background-size: cover;
   background-position: center;
 }
 #tab4.panel{
-  background-image: url("../img/4.jpg");
+  background-image: url("../img/ishioka.jpg");
   background-size: cover;
   background-position: center;
 }
 #tab5.panel{
-  background-image: url("../img/5.jpg");
+  background-image: url("../img/imai.jpg");
   background-size: cover;
   background-position: center;
 }
 #tab6.panel{
-  background-image: url("../img/6.jpg");
+  background-image: url("../img/ohta.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tab7.panel{
+  background-image: url("../img/kageyama.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tab8.panel{
+  background-image: url("../img/satoh.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tab9.panel{
+  background-image: url("../img/sawada.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tab10.panel{
+  background-image: url("../img/suzuki.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tab11.panel{
+  background-image: url("../img/nakama.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tab12.panel{
+  background-image: url("../img/nishimura.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tab13.panel{
+  background-image: url("../img/hata.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tab14.panel{
+  background-image: url("../img/aiga.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tab15.panel{
+  background-image: url("../img/azusa.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab16.panel{
+  background-image: url("../img/harada.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab17.panel{
+  background-image: url("../img/hino.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab18.panel{
+  background-image: url("../img/humino.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab19.panel{
+  background-image: url("../img/hurumoto.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab20.panel{
+  background-image: url("../img/hosokawa.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab21.panel{
+  background-image: url("../img/horie.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab22.panel{
+  background-image: url("../img/horisawa.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab23.panel{
+  background-image: url("../img/matuo.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab24.panel{
+  background-image: url("../img/mori.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab25.panel{
+  background-image: url("../img/moriyama.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab26.panel{
+  background-image: url("../img/yamamoto.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#tab27.panel{
+  background-image: url("../img/yokosuka.jpg");
   background-size: cover;
   background-position: center;
 }

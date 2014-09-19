@@ -1,0 +1,210 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="css/application.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/touchwipe.js"></script>
+<script type="text/javascript" src="js/mvcontainer.js"></script>
+</head>
+
+<body>
+<!-- ________________________________________________________ -->
+<div id="tab1" class="panel active" >
+  <div class="smoke"></div>
+</div>
+<div id="tab2" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab3" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab4" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab5" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab6" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab7" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab8" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab9" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab10" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab11" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab12" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab13" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab14" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab15" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab16" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab17" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab18" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab19" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab20" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab21" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab22" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab23" class="panel" >
+  <div class="smoke"></div>
+</div>
+<div id="tab24" class="panel" >
+  <div class="smoke"></div>
+</div>
+
+<!-- ________________________________________________________ -->
+<div class="wrap">
+  <div class="main-tabs">
+    <div class="tab-content">
+      <div class="tab" data-number="1"><div class="tabname">ABOUT　</div></div>
+      <div class="tab" data-number="2"><div class="tabname">WORKS　</div></div>
+      <div class="tab" data-number="3"><div class="tabname">MEMBER</div></div>
+      <div class="tab" data-number="4"><div class="tabname">BUSINESS</div></div>
+      <div class="tab" data-number="5"><div class="tabname">TWITTER</div></div>
+      <div class="tab" data-number="6"><div class="tabname">CONTACT</div></div>
+    </div>
+  </div>
+</div>
+<!-- ________________________________________________________ -->
+
+
+<script>
+$(function(){
+  document.ontouchmove = function(event){
+    event.preventDefault();
+  }
+  var act = 1;
+  var isActive = true;
+  var panelCount = 24;
+  $('.tab').on("click",function(){
+    var num = $(this).data("number");
+    shiftPanel(num,act);
+  });
+
+  var shiftPanel = function(number, activenumber){
+    if(isActive){
+      isActive = false;
+      if(activenumber==number){
+        isActive = true;
+      }else if(activenumber<number){
+        $("#tab"+activenumber).animate({
+          left: '-100%'
+        }, 100, function() {
+          $(this).css({"left":"auto"});
+          $(this).removeClass("active");
+        });
+        $("#tab"+number).css({"right":"-100%"});
+        $("#tab"+number).addClass("active");
+        $("#tab"+number).animate({
+          right: '0'
+        }, 100, function() {
+          $(this).css({"left":"auto"});
+          isActive = true;
+        });
+      }else{
+        $("#tab"+activenumber).animate({
+          left: '100%'
+        }, 100, function() {
+          $(this).css({"left":"auto"});
+          $(this).removeClass("active");
+        });
+        $("#tab"+number).css({"right":"100%"});
+        $("#tab"+number).addClass("active");
+        $("#tab"+number).animate({
+          right: '0'
+        }, 100, function() {
+          $(this).css({"left":"auto"});
+          isActive = true;
+        });
+      }
+      act = number;
+    }
+  }
+
+  $('html').keyup(function(e){
+    if(true){
+      switch(e.which){
+        case 39: // Key[→]
+        if(act<panelCount){
+          console.log("migi")
+          shiftPanel(act+1,act);
+        }
+        break;
+        case 37: // Key[←]
+        if(1<act){
+          shiftPanel(act-1,act);
+          console.log("hidari")
+        }
+        break;
+        case 38: // Key[↑]
+        console.log("ue")
+        $('.left-lp').addClass("open-l")
+        $('.right-lp').addClass("open-r")
+        break;
+        case 40: // Key[↓]
+        console.log("sita")
+        break;
+      }
+    }
+  });
+
+  $("body").touchwipe({
+    wipeLeft: function() {
+      if(act<6){
+        console.log("migi")
+        shiftPanel(act+1,act);
+      }
+    },
+    wipeRight: function() {
+      if(1<act){
+        shiftPanel(act-1,act);
+        console.log("hidari")
+      }
+    },
+    wipeUp: function() {
+        console.log("ue")
+    },
+    wipeDown: function() {
+        console.log("sita")
+    },
+    min_move_x: 20,
+    min_move_y: 20,
+    preventDefaultEvents: false
+  });
+});
+</script>
+</body>
+</html>

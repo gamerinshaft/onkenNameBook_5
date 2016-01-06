@@ -176,6 +176,19 @@ body,html{
 .part:before{
   content: "パート：";
 }
+.tel:before{
+  content:"TEL：";
+}
+.line:before{
+  content:"LINE ID：";
+}
+.email:before{
+  content:"Email：" ;
+}
+.band:before{
+  content:"好きなバンド：";
+}
+
 .smoke{
   position: absolute;
   background-color: rgba(0,0,0,0.6);
@@ -231,5 +244,6 @@ body,html{
   padding-bottom: 0px;
   margin-bottom: 2px;
 }
+
 /*---------------*/
 

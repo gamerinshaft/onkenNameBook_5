@@ -188,7 +188,9 @@ body,html{
 .band:before{
   content:"好きなバンド：";
 }
-
+.position:before{
+  content:"役職";
+}
 .smoke{
   position: absolute;
   background-color: rgba(0,0,0,0.6);

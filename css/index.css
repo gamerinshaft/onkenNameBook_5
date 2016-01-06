@@ -176,6 +176,10 @@ body,html{
 .part:before{
   content: "パート：";
 }
+
+.pos:before{
+  content:"役職：";
+}
 .tel:before{
   content:"TEL：";
 }
@@ -188,9 +192,11 @@ body,html{
 .band:before{
   content:"好きなバンド：";
 }
-.position:before{
-  content:"役職";
+.band{
+  max-height: 100px;
+  overflow: scroll;
 }
+
 .smoke{
   position: absolute;
   background-color: rgba(0,0,0,0.6);
